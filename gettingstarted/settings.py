@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'usermgmt',
     'rest_framework',
     'django_extensions',
+    'contact'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -144,7 +145,4 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
-    )
 }
