@@ -4,6 +4,7 @@ from .views import UserViewSet
 
 urlpatterns = [
     url(r'^$', UserViewSet.as_view({
-    		"get": "list"
+    		"get": "list",
+    		"post": "create"
     	})),
 ]

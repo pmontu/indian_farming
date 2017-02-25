@@ -5,6 +5,7 @@ from rest_framework import mixins
 from .serializers import UserSerializer
 
 class UserViewSet(
+		mixins.CreateModelMixin,
 		mixins.ListModelMixin,
 		viewsets.GenericViewSet):
 	serializer_class = UserSerializer
