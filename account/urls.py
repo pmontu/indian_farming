@@ -1,9 +1,9 @@
 from django.conf.urls import url
 
-from .views import OrderViewSet
+from .views import AccountViewSet
 
 urlpatterns = [
-	url(r'^$', OrderViewSet.as_view({
+	url(r'^$', AccountViewSet.as_view({
 			"post": "create"
 		}))
 ]
