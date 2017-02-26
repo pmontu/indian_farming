@@ -26,8 +26,10 @@ class Account(models.Model):
     volume = models.PositiveIntegerField()
     delivery_date = models.DateField()
     entry_by = models.ForeignKey(User)
+    ORDER = "O"
+    PRODUCE = "P"
     ENTRY_TYPES = (
-        ("O", "Order"),
-        ("P", "Produce")
+        (ORDER, "Order"),
+        (PRODUCE, "Produce")
     )
     entry = models.CharField(choices=ENTRY_TYPES, max_length=1)

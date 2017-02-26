@@ -4,6 +4,7 @@ from .views import AccountViewSet
 
 urlpatterns = [
 	url(r'^$', AccountViewSet.as_view({
-			"post": "create"
+			"post": "create",
+			"get": "list"
 		}))
 ]

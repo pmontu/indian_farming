@@ -5,6 +5,7 @@ from .models import CustomUser
 
 
 class UserSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     username = serializers.CharField()
     user_type = serializers.ChoiceField(
         CustomUser.SPECIAL_USER_CHOICES,
