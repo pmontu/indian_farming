@@ -4,10 +4,10 @@
 
 ### Endpoints
 
-* Signup by POST http://http://indian-farming.herokuapp.com//user/
-* Admin View of Signed up users by GET http://http://indian-farming.herokuapp.com//user/
-* Logged in Farmer Submit Produce/Logged in Customer Submit Future Order by POST http://http://indian-farming.herokuapp.com//account/
-* Admin Analytics View by GET http://http://indian-farming.herokuapp.com//account/
+* Signup by POST http://indian-farming.herokuapp.com//user/
+* Admin View of Signed up users by GET http://indian-farming.herokuapp.com//user/
+* Logged in Farmer Submit Produce/Logged in Customer Submit Future Order by POST http://indian-farming.herokuapp.com//account/
+* Admin Analytics View by GET http://indian-farming.herokuapp.com//account/
 
 ## Seup
 
