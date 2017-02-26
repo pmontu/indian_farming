@@ -42,7 +42,8 @@ INSTALLED_APPS = (
     'rest_framework',
     'django_extensions',
     'contact',
-    'advanced_order'
+    'advanced_order',
+    'production'
 )
 
 MIDDLEWARE_CLASSES = (
