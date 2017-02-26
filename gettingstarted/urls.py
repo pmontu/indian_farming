@@ -4,6 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 import usermgmt.urls, contact.urls, hello.views, account.urls
+import oauth2_provider.urls
 # Examples:
 # url(r'^$', 'gettingstarted.views.home', name='home'),
 # url(r'^blog/', include('blog.urls')),
@@ -11,6 +12,7 @@ import usermgmt.urls, contact.urls, hello.views, account.urls
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
+    url(r'^o/', include(oauth2_provider.urls, namespace='oauth2_provider')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^user/', include(usermgmt.urls)),
     url(r'^contact/', include(contact.urls)),

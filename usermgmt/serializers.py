@@ -1,12 +1,13 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from rest_framework.validators import UniqueValidator
 
 from .models import CustomUser
 
 
 class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
-    username = serializers.CharField()
+    username = serializers.CharField(validators=[UniqueValidator(queryset=User.objects.all())])
     user_type = serializers.ChoiceField(
         CustomUser.SPECIAL_USER_CHOICES,
         source="customuser.user_type")

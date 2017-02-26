@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'contact',
     'account',
+    'oauth2_provider',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -143,7 +144,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
     ),
 }
