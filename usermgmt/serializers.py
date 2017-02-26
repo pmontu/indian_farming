@@ -12,6 +12,7 @@ class UserSerializer(serializers.Serializer):
     password = serializers.CharField(
         max_length=128, write_only=True,
         style={'input_type': 'password'})
+    is_superuser = serializers.BooleanField(read_only=True)
 
     def create(self, validated_data):
         customuser = validated_data.pop("customuser")

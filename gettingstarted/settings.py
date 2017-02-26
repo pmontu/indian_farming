@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'usermgmt',
     'rest_framework',
     'django_extensions',
-    'contact'
+    'contact',
+    'advanced_order'
 )
 
 MIDDLEWARE_CLASSES = (
